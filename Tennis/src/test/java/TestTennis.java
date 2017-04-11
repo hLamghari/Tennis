@@ -1,5 +1,6 @@
 
 import com.kata.tennis.Game;
+import com.kata.tennis.Player;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
@@ -16,13 +17,16 @@ import org.junit.Test;
  * @author hlamghari
  */
 public class TestTennis {
-    private Game game = new Game();
+    Player player1 = new Player();
+    Player player2 = new Player();
+    private Game game = new Game(player1, player2);
     @Test
     public void gameStart(){
         assertThat(game.score(), is(equalTo("love-love")));
     }
     @Test
     public void player_1_scores(){
+        player1.hasScored();
         assertThat(game.score(), is(equalTo("fifteen-love")));
     }
 }

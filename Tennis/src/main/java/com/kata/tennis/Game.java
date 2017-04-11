@@ -5,12 +5,24 @@
  */
 package com.kata.tennis;
 
+import java.util.Arrays;
+import java.util.List;
+
 /**
  *
  * @author hlamghari
  */
 public class Game {
+    private Player player1;
+    private Player player2;
+    private List<String> scores = Arrays.asList("love", "fifteen", "thirty", "forty");
+    
+    public Game(Player player1, Player player2) {
+        this.player1 = player1;
+        this.player2 = player2;
+    }
+    
     public String score(){
-        return "love-love";
+        return scores.get(player1.getScore())+"-"+scores.get(player2.getScore());
     }
 }
