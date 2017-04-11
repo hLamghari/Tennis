@@ -1,7 +1,8 @@
 
-import org.hamcrest.CoreMatchers;
+import com.kata.tennis.Game;
+import static org.hamcrest.CoreMatchers.equalTo;
 import org.hamcrest.MatcherAssert;
-import org.hamcrest.core.Is;
+import static org.hamcrest.core.Is.is;
 import org.junit.Test;
 
 /*
@@ -15,9 +16,9 @@ import org.junit.Test;
  * @author hlamghari
  */
 public class TestTennis {
-    private Game game;
+    private Game game = new Game();
     @Test
     public void gameStart(){
-        MatcherAssert.assertThat(game.score(), Is.is(CoreMatchers.equalTo("love-love")));
+        MatcherAssert.assertThat(game.score(), is(equalTo("love-love")));
     }
 }
