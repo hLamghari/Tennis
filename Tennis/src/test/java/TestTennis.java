@@ -17,8 +17,8 @@ import org.junit.Test;
  * @author hlamghari
  */
 public class TestTennis {
-    Player player1 = new Player();
-    Player player2 = new Player();
+    Player player1 = new Player("player 1");
+    Player player2 = new Player("player 2");
     private Game game = new Game(player1, player2);
     @Test
     public void gameStart(){
@@ -43,5 +43,17 @@ public class TestTennis {
         player2.hasScored();
         player2.hasScored();
         assertThat(game.score(), is(equalTo("deuce")));
+    }
+    
+    @Test
+    public void players_1_advantage(){
+        player1.hasScored();
+        player1.hasScored();
+        player1.hasScored();
+        player1.hasScored();
+        player2.hasScored();
+        player2.hasScored();
+        player2.hasScored();
+        assertThat(game.score(), is(equalTo("advantage player 1")));
     }
 }

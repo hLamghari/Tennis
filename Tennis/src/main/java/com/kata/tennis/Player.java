@@ -11,9 +11,18 @@ package com.kata.tennis;
  */
 public class Player {
     private int score = 0;
+    private String name;
 
+    public String getName() {
+        return name;
+    }
+    
     public int getScore() {
         return score;
+    }
+
+    public Player(String name) {
+        this.name = name;
     }
     
     public void hasScored(){
