@@ -27,6 +27,11 @@ public class Game {
             if(player1.getScore() == player2.getScore()){
                 return "deuce";
             }
+            if(Math.abs(player1.getScore() - player2.getScore()) == 1){
+                if(player1.getScore()>player2.getScore()){
+                    return "advantage "+player1.getName();
+                }else return "advantage "+player2.getName();
+            }
         }
         return scores.get(player1.getScore())+"-"+scores.get(player2.getScore());
     }
