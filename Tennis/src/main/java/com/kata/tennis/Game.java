@@ -36,6 +36,11 @@ public class Game {
                 return player1.getName()+" wins";
             }else return player2.getName()+" wins";
         }
+        if(player1.getScore() == 4 && player1.getScore() - player2.getScore() > 1){
+            return player1.getName()+" wins";
+        } else if(player2.getScore() == 4 && player2.getScore() - player1.getScore() > 1){
+            return player2.getName()+" wins";
+        }
         return scores.get(player1.getScore())+"-"+scores.get(player2.getScore());
     }
 }
