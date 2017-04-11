@@ -29,4 +29,19 @@ public class TestTennis {
         player1.hasScored();
         assertThat(game.score(), is(equalTo("fifteen-love")));
     }
+    @Test
+    public void player_2_scores(){
+        player2.hasScored();
+        assertThat(game.score(), is(equalTo("love-fifteen")));
+    }
+    @Test
+    public void players_deuce(){
+        player1.hasScored();
+        player1.hasScored();
+        player1.hasScored();
+        player2.hasScored();
+        player2.hasScored();
+        player2.hasScored();
+        assertThat(game.score(), is(equalTo("deuce")));
+    }
 }
