@@ -23,6 +23,9 @@ public class Game {
     }
     
     public String score(){
+        if(player1.getScore()==3 && player2.getScore()==3){
+            return "deuce";
+        }
         return scores.get(player1.getScore())+"-"+scores.get(player2.getScore());
     }
 }
