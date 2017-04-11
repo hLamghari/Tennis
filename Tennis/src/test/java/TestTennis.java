@@ -69,4 +69,14 @@ public class TestTennis {
         player2.hasScored();
         assertThat(game.score(), is(equalTo("player 1 wins")));
     }
+    
+    @Test
+    public void players_2_wins(){
+        player1.hasScored();
+        player2.hasScored();
+        player2.hasScored();
+        player2.hasScored();
+        player2.hasScored();
+        assertThat(game.score(), is(equalTo("player 2 wins")));
+    }
 }
