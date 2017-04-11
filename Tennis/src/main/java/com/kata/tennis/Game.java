@@ -32,6 +32,9 @@ public class Game {
                     return "advantage "+player1.getName();
                 }else return "advantage "+player2.getName();
             }
+            if(player1.getScore()>player2.getScore()){
+                return player1.getName()+" wins";
+            }else return player2.getName()+" wins";
         }
         return scores.get(player1.getScore())+"-"+scores.get(player2.getScore());
     }
